@@ -1,0 +1,36 @@
+.top-div {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+ 
+#h1-tag, #h2-tag {
+    text-align: center;
+}
+ 
+.dummy-button, #next {
+    display: flex;
+    justify-content: center;
+}
+ 
+.button {
+    display: flex;
+    justify-content: space-around;
+}
+ 
+.button-style {
+    color: white;
+    background-color: green;
+}
+ 
+.solid-line {
+    border-top: 1px solid grey;
+    margin-top: 20px;
+}
+ 
+#result {
+    font-size: 30px;
+    text-align: center;
+}
+ 
+
