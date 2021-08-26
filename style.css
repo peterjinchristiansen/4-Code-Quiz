@@ -1,36 +1,94 @@
-.top-div {
+/*Main Page*/
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: url('images/moroccan-flower.png');
+}
+
+.header {
     display: flex;
     justify-content: space-between;
-    margin: 10px;
 }
- 
-#h1-tag, #h2-tag {
+
+.highScores {
+    padding: 20px;
+}
+
+#timeLeft {
+    margin-right: 10px;
+}
+
+#quizText {
     text-align: center;
 }
- 
-.dummy-button, #next {
-    display: flex;
-    justify-content: center;
-}
- 
-.button {
+
+#buttonDiv {
     display: flex;
     justify-content: space-around;
 }
- 
-.button-style {
-    color: white;
-    background-color: green;
+
+#nextButtonDiv {
+    display: flex;
+    justify-content: center;
 }
- 
-.solid-line {
-    border-top: 1px solid grey;
-    margin-top: 20px;
+
+#startButton {
+    color: blue;
+    background-color: orange;
+    width: 100px;
+    height: 60px;
+    font-weight: 900;
+    border-radius: 10px;
+    font-size: 20px;
 }
- 
-#result {
-    font-size: 30px;
+
+#startButton:hover {
+    color: cyan;
+    background-color: crimson;
+    transition: 1s all;
+}
+
+.lineSeparation {
+    border-top: black 1px solid;
+}
+
+#questionResultDisplay {
     text-align: center;
 }
- 
 
+.responseButton {
+    color: white;
+    background-color: green;
+    width: 100px;
+    height: 60px;
+    font-weight: 900;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.responseButton:hover {
+    color: purple;
+    background-color: blue;
+    transition: 1s all;
+}
+
+/*Highscores Page*/
+
+#highScoreHeading {
+    text-align: center;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 80%;
+    border: solid black 1px;
+    border-radius: 15px;
+}
+
+.text-center {
+    text-align: center;
+}
