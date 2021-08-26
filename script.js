@@ -96,7 +96,6 @@ function checkQuestionNumber() {
     if (currentQuestion < 10) {
         startFunction();
     } else {
-        alert("Quiz Complete!");
         var finalScore = timeLeft;
         var name = prompt("Please enter your name")
         location.href = 'highscores.html';
