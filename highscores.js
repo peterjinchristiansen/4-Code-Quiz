@@ -14,26 +14,30 @@ window.onload = function() {
     displayHighScores();
 }
 
-var newObject = {};
-var newArray = [];
+
+
 
 function displayHighScores() {
-//grabs the array from local storage and changes it into variable newArray
-    var newArrayBridge = localStorage.getItem('newArray');
-    var newArray = ('newArrayBridge: ', JSON.parse(newArrayBridge));
 
-    console.log(newArray);
-
-//changes the score and name and sets it to newObject, then pushes the object to newArray
     var myScore = parseInt(localStorage.getItem('finalScore'));
     var myName = localStorage.getItem('name');
-    highScoreHeadingEl.innerHTML = "Your most recent score was: " + myScore;
+    var newObject = {};
     newObject.name = myName;
     newObject.score = myScore;
+
+    var newArrayBridge = localStorage.getItem('newArray');
+
+    if(newArrayBridge == null) {
+        var newArray = [];
+    } else {
+        var newArray = ('newArrayBridge: ', JSON.parse(newArrayBridge));
+    }
+
+    highScoreHeadingEl.innerHTML = "Your most recent score was: " + myScore;
     newArray.push(newObject);
 
-//sorts the array by score in descending order
     newArray.sort((a, b) => parseFloat(b.score) - parseFloat(a.score));
+    localStorage.setItem('newArray', JSON.stringify(newArray));
 
     score0.innerHTML = newArray[0].score + " (" + newArray[0].name + ")"
     score1.innerHTML = newArray[1].score + " (" + newArray[1].name + ")"
@@ -46,5 +50,5 @@ function displayHighScores() {
     score8.innerHTML = newArray[8].score + " (" + newArray[8].name + ")"
     score9.innerHTML = newArray[9].score + " (" + newArray[9].name + ")"
     
-    localStorage.setItem('newArray', JSON.stringify(newArray));
+
 }

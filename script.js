@@ -5,12 +5,12 @@ var buttonDivEl = document.getElementById('buttonDiv');
 var questionResultDisplayEl = document.getElementById('questionResultDisplay');
 var nextButtonDivEl = document.getElementById('nextButtonDiv');
 
-var questions = ['Placeholder', 'q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10'];
-var responseA = ['Placeholder', 'q1r1', 'q2r1', 'q3r1', 'q4r1', 'q5r1', 'q6r1', 'q7r1', 'q8r1', 'q9r1', 'q10r1'];
-var responseB = ['Placeholder', 'q1r2', 'q2r2', 'q3r2', 'q4r2', 'q5r2', 'q6r2', 'q7r2', 'q8r2', 'q9r2', 'q10r2'];
-var responseC = ['Placeholder', 'q1r3', 'q2r3', 'q3r3', 'q4r3', 'q5r3', 'q6r3', 'q7r3', 'q8r3', 'q9r3', 'q10r3'];
-var responseD = ['Placeholder', 'q1r4', 'q2r4', 'q3r4', 'q4r4', 'q5r4', 'q6r4', 'q7r4', 'q8r4', 'q9r4', 'q10r4'];
-var correctAnswers = ['Placeholder', 'q1r2', 'q2r2', 'q3r4', 'q4r3', 'q5r1', 'q6r4', 'q7r2', 'q8r3', 'q9r4', 'q10r1'];
+var questions = ['Placeholder', "What does 'i++' mean?", "Which of the following is correct syntax for storing an item into local storage?", "What does 'var El = document.getElementById('#id');' mean?", "Which of the following is the correct syntax for defining a function?", "In the following code: setInterval(function(){}, 1000); what does the '1000' represent?", "What does the following code do: window.onload = function() {}", "What is the purpose of a for loop?", "What is the correct syntax for selecting the 4th item in an array?", "What does the following code do: 'El.appendChild(btn)'?", "What will the following code output: 5%3"];
+var responseA = ['Placeholder', "Increments i by 2", "setItem.localStorage('score', score);", "Sets the variable 'El' to the element in HTML with an id of 'id'", "function(myFunction) {}", "The function will run every 1000 milliseconds", "Grabs the function from localStorage when the page loads", "Runs a function indefinitely", "array(4)", "Runs the function El when btn is clicked", "2"];
+var responseB = ['Placeholder', "Increments i by 1", "localStorage.setItem('score', score);", "Searches the document for an element with an id of 'El'", "myFunction() {}", "How many times the function will run", "Runs the function everytime something on the page loads", "Runs a function a certain number of times", "array[4]", "Appends El into btn", "8"];
+var responseC = ['Placeholder', "Defines the variable 'i'", "localStorage.score('score');", "Puts the contents of the variable onto the body of the HTML page", "function myFunction() {}", "The function will run every 1000 seconds", "Stops the function when the page loads", "Runs a function everytime a button is clicked", "array[3]", "Creates a button called El", "53"];
+var responseD = ['Placeholder', "The syntax is incorrect", "score.setItem(localStorage);", "The syntax is incorrect", "function myFunction {}", "The argument for the function", "Runs the function when the page first loads", "Runs a function until a button is clicked", "array.4", "Appends btn into El", "5.3"];
+var correctAnswers = ['Placeholder', "Increments i by 1", "localStorage.setItem('score', score);", "The syntax is incorrect", "function myFunction() {}", "The function will run every 1000 milliseconds", "Runs the function when the page first loads", "Runs a function a certain number of times", "array[3]", "Appends btn into El", "2"];
 
 startButtonEl.onclick = startTimer;
 
@@ -98,7 +98,9 @@ function checkQuestionNumber() {
     } else {
         var finalScore = timeLeft;
         var name = prompt("Please enter your name")
-        location.href = 'highscores.html';
+
         localStorage.setItem('finalScore', finalScore);
         localStorage.setItem('name', name);
+
+        location.href = 'highscores.html';
 }}

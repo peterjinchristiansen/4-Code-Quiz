@@ -25,6 +25,7 @@ body {
 #buttonDiv {
     display: flex;
     justify-content: space-around;
+    width: auto;
 }
 
 #nextButtonDiv {
@@ -59,8 +60,6 @@ body {
 .responseButton {
     color: white;
     background-color: green;
-    width: 100px;
-    height: 60px;
     font-weight: 900;
     border-radius: 10px;
     font-size: 20px;
