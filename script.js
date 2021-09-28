@@ -18,9 +18,20 @@ var currentQuestion = 0;
 var timeLeft = 300;
 
 function startTimer() {
-    setInterval(function(){
+    var timerInterval = setInterval(function(){
         timerEl.innerHTML = "Time Left: " + timeLeft;
         timeLeft--;
+        if (timeLeft < 0) {
+            currentQuestion = 10;
+            timerEl.innerHTML = "Time Left: 0"
+            buttonDivEl.innerHTML = "";
+            var endQuizButton = document.createElement('button');
+            endQuizButton.innerHTML = "Click me to end the quiz";
+            endQuizButton.onclick = checkQuestionNumber;
+            endQuizButton.className = "responseButton";
+            nextButtonDivEl.appendChild(endQuizButton);
+            clearInterval(timerInterval);
+        }
     }, 1000)
     
     startFunction();
@@ -96,7 +107,12 @@ function checkQuestionNumber() {
     if (currentQuestion < 10) {
         startFunction();
     } else {
-        var finalScore = timeLeft;
+        if(timeLeft <= 0) {
+            var finalScore = 0;
+        } else {
+            var finalScore = timeLeft;
+        }
+
         var name = prompt("Please enter your name")
 
         localStorage.setItem('finalScore', finalScore);
