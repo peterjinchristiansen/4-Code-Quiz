@@ -4,7 +4,7 @@
   
 ## Description
   
-This project is a JavaScript quiz that will save your highscores to LocalStorage and display the updated top 10 scores (in order) upon completion.
+    This project is a JavaScript quiz that will save your highscores to LocalStorage and display the updated top 10 scores (in order) upon completion.
 
 ---
   
