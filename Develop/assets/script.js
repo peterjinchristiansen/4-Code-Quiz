@@ -118,5 +118,5 @@ function checkQuestionNumber() {
         localStorage.setItem('finalScore', finalScore);
         localStorage.setItem('name', name);
 
-        location.href = 'highscores.html';
+        location.href = 'Develop/highscores.html';
 }}

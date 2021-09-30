@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    background-image: url('images/moroccan-flower.png');
+    background-image: url('../images/moroccan-flower.png');
 }
 
 .header {

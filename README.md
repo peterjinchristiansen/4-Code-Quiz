@@ -1,10 +1,36 @@
-# Challenge-4
+# Code Quiz
 
-This is a javascript quiz. You will answer a series of 10 questions related to javascript, with a
-timer of 300 seconds. For each incorrect question, the value on the timer will be deducted by 15 seconds.
-The time left will be your final score. The website also has a functional highscores page.
+---
+  
+## Description
+  
+This project is a JavaScript quiz that will save your highscores to LocalStorage and display the updated top 10 scores (in order) upon completion.
 
+---
+  
+## Table of Contents
+  
+[Usage](#usage)
+  
+[Questions](#questions)
 
-LINK: https://peterjinchristiansen.github.io/Challenge-4/
+[Screenshot](#screenshot)
 
-![](images\Screenshot-4.PNG)
+---
+  
+## Usage
+  
+Link to deployed website: https://peterjinchristiansen.github.io/4-Code-Quiz/
+  
+---
+  
+## Questions
+  
+If you have any questions, you can e-mail me at peterjinchristiansen@gmail.com.
+You can also access my other projects at https://github.com/peterjinchristiansen
+  
+---
+
+## Screenshot
+
+![image](https://user-images.githubusercontent.com/82626937/135536291-bfed3562-4b8e-4b04-9cbf-0b67838d760e.png)
